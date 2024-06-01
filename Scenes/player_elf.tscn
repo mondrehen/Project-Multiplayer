@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccbkwg4cn3n15"]
+
+[ext_resource type="Script" path="res://Scenes/player_elf.gd" id="1_pggye"]
+[ext_resource type="SpriteFrames" uid="uid://dmh6n65xo757d" path="res://Scenes/player_elf.tres" id="1_x75ht"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_so50p"]
+radius = 106.667
+height = 540.0
+
+[node name="Player_Elf" type="CharacterBody2D" node_paths=PackedStringArray("player_sprite")]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_pggye")
+player_sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -302)
+sprite_frames = ExtResource("1_x75ht")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -1700)
+zoom = Vector2(0.5, 0.5)
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.33333, -270)
+shape = SubResource("CapsuleShape2D_so50p")
