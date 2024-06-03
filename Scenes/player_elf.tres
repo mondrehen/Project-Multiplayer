@@ -88,7 +88,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_1y3a5")
 }],
-"loop": true,
+"loop": false,
 "name": &"double_jump_start",
 "speed": 24.0
 }, {
@@ -216,7 +216,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("42_pksji")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump_start",
 "speed": 24.0
 }, {
